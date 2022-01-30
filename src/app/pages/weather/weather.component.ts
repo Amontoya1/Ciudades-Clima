@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { WeatherData } from 'src/shared/interfaces/weather.interface';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'amr-weather',
   templateUrl: './weather.component.html',
-  styleUrls: ['./weather.component.scss']
+  styleUrls: ['./weather.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class WeatherComponent implements OnInit {
+export class WeatherComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  @Input() public weather!: WeatherData;
+  public BASE_URL = 'http://openweathermap.org/img/wn';
 }

@@ -4,11 +4,22 @@ nav.nav{
     padding: 0.75 rem  0.50rem;
     background-color: $main-color;
     margin-bottom: 0.75rem;
+    text-align: center;
     
   .brand {
     color: $white;
     font-weight: 600;
     line-height: 1.75rem;
     font-size: 1.50rem;
+  }
+}
+
+div span {
+  text-align: center;
+  margin-top: 2rem;
+  display: inherit;
+
+  strong{
+    color:  $main-color;
   }
 }

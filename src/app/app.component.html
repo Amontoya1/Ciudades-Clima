@@ -3,6 +3,19 @@
 </nav>
 
 <div class="container mx-auto">
-  <amr-search></amr-search>
-  <amr-weather></amr-weather>
+  <amr-search (submitted)="onSearch($event)"></amr-search>
+  <amr-weather *ngIf="weather$ | async as weather" [weather]="weather"></amr-weather>
 </div>
+
+<div class="container mx-auto">
+ 
+  <span>
+    <fa-icon [icon]="faCoffee"></fa-icon>     
+    Desenvolvido por <strong>Andrea<span> Montoya</span></strong>
+  </span>
+</div>
+
+
+ 
+
+
